@@ -79,21 +79,26 @@ Berikut adalah daftar routing halaman serta endpoint REST API beserta method dan
 Berikut adalah penjelasan dan dokumentasi visual tampilan aplikasi serta pengujian API yang terletak pada folder `SCREENSHOT`:
 
 1. **Homepage (Beranda)**
-   * **File Screenshot:** [HOMEPAGE.png](/SCREENSHOT/HOMEPAGE.png)
+   * **Screenshot:**
+     ![Homepage](./SCREENSHOT/HOMEPAGE.png)
    * **Deskripsi:** Halaman utama yang memuat navigasi menu bar (Navbar), banner sambutan Toko Ariesta, tombol jalan pintas ke katalog, serta daftar card produk pilihan (limit 3 produk) dengan link detail.
 
 2. **Katalog Produk**
-   * **File Screenshot:** [KATALOG.png](/SCREENSHOT/KATALOG.png)
+   * **Screenshot:**
+     ![Katalog](./SCREENSHOT/KATALOG.png)
    * **Deskripsi:** Halaman katalog lengkap yang menampilkan seluruh daftar produk sembako. Di bagian atas, terdapat formulir pencarian serta opsi dropdown filter kategori ("Beras", "Minyak", "Gula", "Telur", "Mie", "Bumbu") beserta tombol "Cari".
 
 3. **Detail Produk**
-   * **File Screenshot:** [VIEW DETAIL PRODUK.png](/SCREENSHOT/VIEW%20DETAIL%20PRODUK.png)
+   * **Screenshot:**
+     ![Detail Produk](./SCREENSHOT/VIEW%20DETAIL%20PRODUK.png)
    * **Deskripsi:** Halaman detail produk dinamis yang menampilkan spesifikasi nama produk, label kategori, harga terformat (Rupiah), sisa stok, tombol navigasi kembali, dan tombol ke menu Tanya AI.
 
 4. **Tanya AI Mockup**
-   * **File Screenshot:** [TANYA AI.png](/SCREENSHOT/TANYA%20AI.png)
+   * **Screenshot:**
+     ![Tanya AI](./SCREENSHOT/TANYA%20AI.png)
    * **Deskripsi:** Antarmuka simulasi asisten virtual berupa window chat interaktif lengkap dengan input text untuk mengetik pertanyaan dan tombol kirim, sebagai persiapan fitur pintar di Sprint berikutnya.
 
 5. **Pengujian REST API via Postman**
-   * **File Screenshot:** [POSTMAN GET API.png](/SCREENSHOT/POSTMAN%20GET%20API.png)
+   * **Screenshot:**
+     ![Postman GET API](./SCREENSHOT/POSTMAN%20GET%20API.png)
    * **Deskripsi:** Hasil pengujian endpoint `GET /api/products` menggunakan aplikasi Postman, menunjukkan respons JSON berstatus "success" beserta data-data produk yang sesuai dengan source code backend.
