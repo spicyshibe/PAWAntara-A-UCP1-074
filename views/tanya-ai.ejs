@@ -1,0 +1,34 @@
+<!-- File: views/tanya-ai.ejs -->
+<%- include('partials/navbar') %>
+
+<section class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[600px]">
+    <div class="bg-blue-600 text-white p-4">
+        <h2 class="text-xl font-bold">Tanya AI - Asisten Toko Ariesta</h2>
+        <p class="text-sm opacity-90">Tanyakan stok, ongkir, atau jam operasional.</p>
+    </div>
+
+    <div class="flex-grow p-4 bg-gray-50 overflow-y-auto flex flex-col gap-4">
+        <!-- Contoh Chat Bubble -->
+        <div class="self-start bg-white border border-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none max-w-[80%] shadow-sm">
+            Halo! Saya asisten AI Toko Ariesta. Ada yang bisa saya bantu hari ini?
+        </div>
+        <div class="self-end bg-blue-500 text-white p-3 rounded-lg rounded-tr-none max-w-[80%] shadow-sm">
+            Apakah beras pandan wangi masih ada?
+        </div>
+        <div class="self-start bg-white border border-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none max-w-[80%] shadow-sm text-sm italic text-gray-400">
+            (Balasan AI akan diimplementasikan pada Sprint 2)
+        </div>
+    </div>
+
+    <form class="p-4 bg-white border-t flex gap-2" onsubmit="event.preventDefault();">
+        <label for="chatInput" class="sr-only">Tulis pertanyaan Anda</label>
+        <input type="text" id="chatInput" class="flex-grow border rounded-full px-4 py-2 focus:outline-none focus:border-blue-500" placeholder="Tulis pesan..." autocomplete="off">
+        <button type="submit" class="bg-blue-600 text-white rounded-full p-2 w-10 h-10 flex items-center justify-center hover:bg-blue-700 transition">
+            <svg class="w-5 h-5 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+        </button>
+    </form>
+</section>
+
+<%- include('partials/footer') %>

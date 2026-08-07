@@ -1,0 +1,36 @@
+<!-- File: views/produk.ejs -->
+<%- include('partials/navbar') %>
+
+<section class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <h2 class="text-2xl font-bold text-gray-800">Katalog Produk</h2>
+    
+    <!-- Form Pencarian / Filter -->
+    <form action="/produk" method="GET" class="flex w-full md:w-auto gap-2">
+        <input type="text" name="search" placeholder="Cari nama produk..." value="<%= query.search || '' %>" class="border p-2 rounded w-full md:w-64" aria-label="Cari Produk">
+        <select name="kategori" class="border p-2 rounded" aria-label="Filter Kategori">
+            <option value="">Semua Kategori</option>
+            <option value="Beras" <%= query.kategori === 'Beras' ? 'selected' : '' %>>Beras</option>
+            <option value="Minyak" <%= query.kategori === 'Minyak' ? 'selected' : '' %>>Minyak</option>
+            <option value="Gula" <%= query.kategori === 'Gula' ? 'selected' : '' %>>Gula</option>
+        </select>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Cari</button>
+    </form>
+</section>
+
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <% if (products.length > 0) { %>
+        <% products.forEach(product => { %>
+            <article class="bg-white border rounded-lg p-4 shadow">
+                <h3 class="text-lg font-semibold text-gray-800"><%= product.name %></h3>
+                <p class="text-sm text-gray-500 mb-2">Kategori: <%= product.category %></p>
+                <p class="text-xl font-bold text-blue-600">Rp <%= product.price.toLocaleString('id-ID') %></p>
+                <p class="text-gray-600 mb-4">Stok: <%= product.stock %></p>
+                <a href="/produk/<%= product.id %>" class="block text-center bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded">Detail Produk</a>
+            </article>
+        <% }) %>
+    <% } else { %>
+        <p class="col-span-3 text-center text-gray-500 py-8">Produk tidak ditemukan.</p>
+    <% } %>
+</section>
+
+<%- include('partials/footer') %>
